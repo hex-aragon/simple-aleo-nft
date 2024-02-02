@@ -13,7 +13,3 @@ snarkos developer deploy \
 --path "./build/" \
 --broadcast "${API}/${BROADCAST}" \
 --priority-fee 1000000
-
-#--fee 0 \
-#--record "${RECORD}"
-

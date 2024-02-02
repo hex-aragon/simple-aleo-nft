@@ -13,9 +13,7 @@ await initThreadPool();
 async function localProgramExecution(program, aleoFunction, inputs) {
   const programManager = new ProgramManager();
   console.log("programManager", programManager);
-  // Create a temporary account for the execution of the program
 
-  //const account = import.meta.env.VITE_APP_ACCOUNT;
   const account =
     "aleo1un2ns2xfja44dqnk6mnttkgsv5s0rtnqp8vyrwfd3wdfh7qm959s7mgrpv";
   console.log("account", account);
@@ -54,11 +52,6 @@ async function deployProgram(program) {
   const networkClient = new AleoNetworkClient(
     "https://api.explorer.aleo.org/v1"
   );
-
-  // Use existing account with funds
-  // const account = new Account({
-  //   privateKey: import.meta.env.VITE_APP_PRIVATE_KEY,
-  // });
 
   const account = import.meta.env.VITE_APP_ACCOUNT;
   const recordProvider = new NetworkRecordProvider(account, networkClient);

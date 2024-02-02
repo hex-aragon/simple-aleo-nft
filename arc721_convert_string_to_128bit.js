@@ -17,11 +17,8 @@ function encodeToAsciiBinary(text) {
 
 const text = "google.com/";
 const result = encodeToAsciiBinary(text);
-console.log("result", result);
 
-console.log(result);
 const unsignedInt128Value = BigInt("0b" + result);
-console.log(unsignedInt128Value);
 
 //137489088058657146712104188238903640064u128
 //137489088058657146712104188238903640064n

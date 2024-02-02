@@ -46,11 +46,8 @@ console.log("hexString_coll_num", hexString_coll_num);
 
 for (let i = 0; i < hexString_coll_num.length; i += 2) {
   const hexByte = hexString_coll_num.substr(i, 2);
-  console.log("hexByte", hexByte);
   const decimalValue = parseInt(hexByte, 16);
-  console.log("decimalValue", decimalValue);
   col_num += String.fromCharCode(decimalValue);
-  console.log("col_num", col_num);
 }
 
 for (let i = 0; i < hexString_base_uri.length; i += 2) {
@@ -73,7 +70,7 @@ for (let i = 0; i < hexString2.length; i += 2) {
   asciiString += String.fromCharCode(decimalValue);
   metadata_2 += String.fromCharCode(decimalValue);
 }
-//asciiString += " ";
+
 
 for (let i = 0; i < hexString3.length; i += 2) {
   const hexByte = hexString3.substr(i, 2);
@@ -81,7 +78,7 @@ for (let i = 0; i < hexString3.length; i += 2) {
   asciiString += String.fromCharCode(decimalValue);
   metadata_3 += String.fromCharCode(decimalValue);
 }
-//asciiString += " ";
+
 
 for (let i = 0; i < hexString4.length; i += 2) {
   const hexByte = hexString4.substr(i, 2);
