@@ -16,17 +16,12 @@ function encodeToAsciiBinary(text) {
 }
 
 const text = "google.com/";
-//const text = "aleo.org/social.png/";
 const result = encodeToAsciiBinary(text);
 console.log("result", result);
 
 console.log(result);
 const unsignedInt128Value = BigInt("0b" + result);
 console.log(unsignedInt128Value);
-
-//0110011101101111011011110110011101101100011001010010111001100011011011110110110100101111
-//0110011101101111011011110110011101101100011001010010111001100011011011110110110100101111
-//0000000000000000000000000000000000000000
 
 //137489088058657146712104188238903640064u128
 //137489088058657146712104188238903640064n
@@ -39,7 +34,6 @@ function decodeFromAsciiBinary(binaryString) {
   return decodedText;
 }
 
-//const text2 = "google.com/";
 const result2 = encodeToAsciiBinary(text);
 console.log("Encoded result:", result2);
 

@@ -2,7 +2,6 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import aleoLogo from "./assets/aleo.svg";
 import "./App.css";
-import helloworld_program from "../helloworld/build/main.aleo?raw";
 import simple_arc721 from "../simple_arc721/build/main.aleo?raw";
 import { AleoWorker } from "./workers/AleoWorker.js";
 
@@ -14,26 +13,6 @@ function App() {
   const [executingCreCol, setExecutingCreCol] = useState(false);
   const [executingMint, setExecutingMint] = useState(false);
   const [deploying, setDeploying] = useState(false);
-
-  async function execute() {
-    const inputValue = prompt("Enter a first value (e.g., 5u32):");
-    const inputValue2 = prompt("Enter a second value (e.g., 5u32):");
-    // Check if inputValue is not null (user clicked Cancel) or empty
-    if (inputValue !== null && inputValue !== "") {
-      setExecuting(true);
-      const result = await aleoWorker.localProgramExecution(
-        helloworld_program,
-        "main",
-        [inputValue, inputValue2] // You can use inputValue here
-      );
-      console.log("result", result);
-      setExecuting(false);
-
-      alert(JSON.stringify(result));
-    } else {
-      alert("Invalid input. Please enter a value.");
-    }
-  }
 
   async function create_collection() {
     const inputValue = prompt("Enter a address value (e.g., aleo1~~~):");
@@ -126,13 +105,6 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          <button disabled={executing} onClick={execute}>
-            {executing
-              ? `Executing...check console for details...`
-              : `Execute helloworld.aleo`}
-          </button>
-        </p>
         <p>
           <button disabled={executingCreCol} onClick={create_collection}>
             {executingCreCol

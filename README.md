@@ -88,3 +88,60 @@ Cross-Origin-Embedder-Policy: require-corp
 We've included a `_headers` file that works with some web hosts (e.g. Netlify)
 but depending on your host / server setup you may need to configure the headers
 manually.
+
+
+```
+.
+├── README.md
+├── _headers
+├── arc721_convert_128bit_to_string.js
+├── arc721_convert_string_to_128bit.js
+├── helloworld
+│   ├── README.md
+│   ├── build
+│   │   ├── main.aleo
+│   │   └── program.json
+│   ├── inputs
+│   │   └── helloworld.in
+│   ├── program.json
+│   └── src
+│       └── main.leo
+├── index.html
+├── install.sh
+├── package-lock.json
+├── package.json
+├── public
+│   └── favicon.ico
+├── simple_arc721
+│   ├── README.md
+│   ├── build
+│   │   ├── main.aleo
+│   │   └── program.json
+│   ├── deploy.sh
+│   ├── deploy_create_collection.sh
+│   ├── deploy_mint.sh
+│   ├── inputs
+│   │   └── simple_arc721.in
+│   ├── local_create_collection.sh
+│   ├── local_mint_nft.sh
+│   ├── program.json
+│   └── src
+│       └── main.leo
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── aleo.svg
+│   │   └── react.svg
+│   ├── index.css
+│   ├── main.jsx
+│   └── workers
+│       ├── AleoWorker.js
+│       ├── util.js
+│       └── worker.js
+├── vite.config.js
+└── webpack.config.js
+
+
+
+```
