@@ -10,12 +10,11 @@ import {
 import { expose, proxy } from "comlink";
 await initThreadPool();
 
-async function localProgramExecution(program, aleoFunction, inputs) {
+async function localProgramExecution( program, aleoFunction, inputs) {
   const programManager = new ProgramManager();
   console.log("programManager", programManager);
 
-  const account =
-    "aleo1un2ns2xfja44dqnk6mnttkgsv5s0rtnqp8vyrwfd3wdfh7qm959s7mgrpv";
+  const account = new Account();
   console.log("account", account);
   programManager.setAccount(account);
   console.log(
@@ -37,10 +36,8 @@ async function localProgramExecution(program, aleoFunction, inputs) {
 }
 
 async function getPrivateKey() {
-  //const key = new PrivateKey();
-
-  const key = import.meta.env.VITE_APP_PRIVATE_KEY;
-  console.log("key", key);
+ // const key = import.meta.env.VITE_APP_PRIVATE_KEY;
+ const key = new PrivateKey()
   return proxy(key);
 }
 

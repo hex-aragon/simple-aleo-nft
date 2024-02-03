@@ -19,7 +19,6 @@ function App() {
     const inputValue2 = prompt("Enter a u128 value (e.g., 0u128):");
     console.log("inputValue", inputValue);
     console.log("inputValue2", inputValue2);
-    // Check if inputValue is not null (user clicked Cancel) or empty
     if (
       inputValue !== null &&
       inputValue !== "" &&
