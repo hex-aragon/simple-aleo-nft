@@ -12,8 +12,7 @@ function getSettingsFromNumber(settingNum) {
     frozen: bitStringArray[3] === "1",
   };
 }
-//test url
-//https://aleo-public.s3.us-west-2.amazonaws.com/testnet3/privacy-pride/1.json
+
 function getBit(setting) {
   return setting ? "1" : "0";
 }
